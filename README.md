@@ -6,5 +6,5 @@ It is a website of Iris, a personal assistant to which you can ask questions. Ir
   What's the time.
   Check the date.
   who is bill gates.
-  (1+2)/2*3
+  (1+2)/2*3.
   what is my ip address.
