@@ -1,5 +1,5 @@
-var accessToken = "ace9b3f4ba6d4573a80bcf107d6f7dd1";
-var baseUrl = "https://api.api.ai/v1/";
+var accessToken = "22b6d67f63b14a23a47a87f1c684a8ca";
+var baseUrl = "https://api.api.ai/v2/";
 var temp;
 var synth ;
 $(document).ready(function () {
