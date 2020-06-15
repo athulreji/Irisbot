@@ -68,26 +68,26 @@ function updateRec() {
     $("#rec").html(recognition ? "<i class='material-icons'>mic_off</i>" : "<i class='material-icons'>mic</i>");
 }
 
-function send() {
-    var text = $("#input").val();
-    $.ajax({
-        type: "POST",
-        url: baseUrl + "query?v=20150910",
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        headers: {
-            "Authorization": "Bearer " + accessToken
-        },
-        data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
-        success: function(data) {
-            setResponse(JSON.stringify(data, undefined, 2));
-        },
-        error: function() {
-            setResponse("Error in communicating with the server.");
-        }
-    });
-}
-function setResponse(val) {
+// function send() {
+//     var text = $("#input").val();
+//     $.ajax({
+//         type: "POST",
+//         url: baseUrl + "query?v=20150910",
+//         contentType: "application/json; charset=utf-8",
+//         dataType: "json",
+//         headers: {
+//             "Authorization": "Bearer " + accessToken
+//         },
+//         data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
+//         success: function(data) {
+//             setResponse(JSON.stringify(data, undefined, 2));
+//         },
+//         error: function() {
+//             setResponse("Error in communicating with the server.");
+//         }
+//     });
+// }
+function send(val) {
 //$("#response").text(val);
 var url = $("#input").val();
 url = url.split(' ').join('+');
