@@ -1,5 +1,5 @@
-var accessToken = "22b6d67f63b14a23a47a87f1c684a8ca";
-var baseUrl = "https://api.api.ai/v2/";
+//var accessToken = "22b6d67f63b14a23a47a87f1c684a8ca";
+//var baseUrl = "https://api.api.ai/v2/";
 var temp;
 var synth ;
 $(document).ready(function () {
@@ -87,13 +87,12 @@ function updateRec() {
 //         }
 //     });
 // }
-function send(val) {
+function send() { //val inside ()
 //$("#response").text(val);
 var url = $("#input").val();
-url = url.split(' ').join('+');
 url = "https://api.duckduckgo.com/?q="+url+"&ia=answer&format=json";
-var obj = JSON.parse(val);
-var response = obj.result.fulfillment.messages[0].speech;//testo a capo  //obj.result.fulfillment.speech;
+//var obj = JSON.parse(val);
+//var response = obj.result.fulfillment.messages[0].speech;//testo a capo  //obj.result.fulfillment.speech;
 if (response == "empty"){
 	$.getJSON(url, function(abc) {
 		var text2 = abc.Answer;
